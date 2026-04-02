@@ -89,6 +89,10 @@ class ProcessorOptions:
     global_properties: Path | None = field(
         default=None, metadata=value_option("JSON or YAML file of Confluence content properties to merge for every synchronized Markdown file.")
     )
+    version_history_comment: str = field(
+        default="Synchronized by md2conf from Markdown file: {relative_path}",
+        metadata=value_option("Custom message template for page updates."),
+    )
 
 
 DocumentOptions = ProcessorOptions

@@ -276,7 +276,7 @@ class SynchronizingProcessor(Processor):
         if has_changes:
             version = page.version.number + 1
             relative_path = path_relative_to(path, self.root_dir)
-            self.api.update_page(page.id, content, title=title, version=version, message=f"Synchronized by md2conf from Markdown file: {relative_path}")
+            self.api.update_page(page.id, content, title=title, version=version, message=f"{self.options.version_history_comment}")
         else:
             version = page.version.number
 
