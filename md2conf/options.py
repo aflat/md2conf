@@ -38,6 +38,7 @@ class ProcessorOptions:
     :param converter: Options for converting an HTML tree into Confluence Storage Format.
     :param line_numbers: Inject line numbers in Markdown source file to help localize conversion errors.
     :param global_properties: JSON or YAML file of Confluence content properties to merge for every synchronized Markdown file.
+    :param version_history_comment: String to add to the version history comment for your page update.
     """
 
     root_page: ConfluencePageID | None = field(
